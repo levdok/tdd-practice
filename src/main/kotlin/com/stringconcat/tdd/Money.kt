@@ -20,11 +20,12 @@ open class Money internal constructor(
     }
 
     enum class Currency {
-        USD, CHF
+        USD, CHF, RUB
     }
 
     companion object {
         fun dollar(amount: Int) = Money(amount = amount, currency = Currency.USD)
         fun franc(amount: Int) = Money(amount = amount, currency = Currency.CHF)
+        fun ruble(amount: Int) = Money(amount = amount, currency = Currency.RUB)
     }
 }
